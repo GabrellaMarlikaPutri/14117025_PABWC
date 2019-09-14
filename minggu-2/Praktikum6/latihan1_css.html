@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Membuat Background dengan Kotak Transparan dengan berisi tulisan CSS</title>
+        <style type="text/css">
+            body {
+                background: url(gambar/gambar3.jpg);
+                height: 100%;
+                position: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+
+            .transbox {
+                background: brown; 
+                width: 700px;
+                height: 100px;
+                margin: 20px;
+                opacity: 0.5;
+                position: relative;
+                filter: alpha(opacity=50);
+                top: 320px;
+                background-attachment: fixed;
+                padding-top: 1%;
+                padding-bottom: 3%;
+            }
+
+            h1 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color:wheat;
+                margin-left: 5%;
+            }
+
+            h4{
+                font-family: Arial, Helvetica, sans-serif;
+                font-style: italic;
+                color:white;
+                margin-left: 5%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="transbox">
+            <h1>REFRESH YOURSELF</h1>
+            <h4>Sebuah tujuan itu bukan tentang tempat, tapi bagaimana cara kita melihat hal baru</h4>
+        </div>
+    </body>
+</html>
