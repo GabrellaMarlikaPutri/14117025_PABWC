@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QueenKost.com</title>
+        <link href="css/gaya.css" rel="stylesheet" type="text/css">
+    </head>
+        
+    <body>
+        <div class="head">
+        <h1>QueenKost.com</h1>
+        <div class="navigasi">
+            <ul>
+                <li><a href="14117025_Latihan1_Minggu3.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="registrasi.html">REGISTRATION</a></li>
+                <li><a href="galeri.html">GALLERY</a></li>
+                <li><a href="kontak.html">CONTACT</a></li>
+           </ul>
+        </div>
+    </div>
+
+    <main>
+        <h3><br><br> FORM <br> REGISTRASI <br> QUEENKOST</h3>
+            <form action="response2.jsp" method="POST">
+            <table border="0" align="center">
+                <tr><td>Nama :</td>
+                   <td><input type="text" name="name"/></td>
+                </tr>
+                <tr><td>No.Identitas :</td>
+                    <td><input type="number" name="Identitas"/></td>
+                </tr>
+                <tr><td>Pekerjaan :</td>
+                    <td><input type="text" name="Pekerjaan"/></td>
+                </tr>
+                <tr><td>No.HP :</td>
+                    <td><input type="number" name="HP"/></td>
+                </tr>
+                <tr><td>No.HP Wali :</td>
+                    <td><input type="number" name="HPWali"/></td>
+                </tr>
+                <tr><td>Email :</td>
+                    <td><input type="email" name="email"/></td>
+                </tr>
+                <tr><td>Alamat :</td>
+                    <td><input type="text" name="address"/></td>
+                </tr>
+                <tr><td>Agama :</td>
+                    <td><select name="Agama">
+                            <option value="Islam">Islam</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Protestan">Protestan</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select></td>
+                </tr>
+                <tr><td>Kategori Kamar :</td>
+                    <td><input type="radio" name="Kategori" value="Deluxe"/>Deluxe 
+                        <input type="radio" name="Kategori" value="Premium"/>Premium
+                        <input type="radio" name="Kategori" value="Standard"/>Standard</td>
+                </tr>
+                <tr><td>Pas Foto Diri :</td>
+                    <td><input type="file" name="upload" value=""/></td>
+                </tr>
+                <tr><td>Dokumen(KTP, KK, Kartu Jaminan Kesehatan) :</td>
+                    <td><input type="file" name="upload2" value=""/></td>
+                </tr>
+                <tr><td></td>
+                <td><input type="submit" name="submit" value="KIRIM" align="right"><input type="reset" value="RESET"></td></tr>
+            </table>   
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <small>&copy; Copyright - QueenKost.com by Gabrella Marlika Putri 2019 | Alright reserved.</small>
+        </div>
+    </footer>
+</html>
