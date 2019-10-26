@@ -1,29 +1,50 @@
 <?php
-error_reporting(0);
-function tampil(){
-    if(isset($_POST['submit'])){
-        $nama = $_POST['nama'];
-        $alamat = $_POST['alamat'];
-        $jenis_kelamin = $_POST['jKel'];
-        $golongan_darah = $_POST['golDarah'];
-        $hobby = $_POST['hobby'];
-        $selected_hobby = "";
-        foreach ($hobby as $minat){
-            $selected_hobby .= $minat . ", ";
-        }
-        $selected_hobby = substr($selected_hobby,0,-2);
-        $keterangan = $_POST['keterangan'];
-
-        echo "<h2>Data yang Tersimpan</h2>";
-        echo "<ul>";
-        echo "<li>Nama : ".$nama."</li>";
-        echo "<li>Alamat : ".$alamat."</li>";
-        echo "<li>Jenis Kelamin : ".$jenis_kelamin."</li>";
-        echo "<li>Golongan Darah : ".$golongan_darah."</li>";
-        echo "<li>Hobby : ".$selected_hobby."</li>";
-        echo "<li>Keterangan : ".$keterangan."</li>";
-        echo "</ul>";
+if(isset($_POST['submit'])){
+    $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+    $jenis_kelamin = $_POST['jKel'];
+    $golongan_darah = $_POST['golDarah'];
+    $hobby = $_POST['hobby'];
+    $selected_hobby = "";
+    foreach ($hobby as $minat){
+        $selected_hobby .= $minat . ", ";
     }
+    $selected_hobby = substr($selected_hobby,0,-2);
+    $keterangan = $_POST['keterangan'];
 }
-tampil();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HASIL INPUT FORM</title>
+</head>
+<body style="background:pink; height:550px; margin: 0 0 20px">
+<u><h2 align="center">HASIL INPUT FORM</h2></u><br>
+    <table class="table" align="center" border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>NAMA</th>
+            <th>ALAMAT</th>
+            <th>JENIS KELAMIN</th>
+            <th>GOLONGAN DARAH</th>
+            <th>HOBBY</th>
+            <th>KETERANGAN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><?= $nama; ?></td>
+            <td><?= $alamat; ?></td>
+            <td><?= $jenis_kelamin; ?></td>
+            <td><?= $golongan_darah; ?></td>
+            <td><?= $selected_hobby; ?></td>
+            <td><?= $keterangan; ?></td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
