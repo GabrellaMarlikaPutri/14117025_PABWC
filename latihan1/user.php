@@ -1,12 +1,12 @@
 <?php
 include_once('DbConnection.php');
-class user extends DbConnection {
-    public function __construct() {
+class User extends DbConnection {
+    public function __construct(){
         parent::__construct();
     }
 
     public function check_login($username, $password) {
-        $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
         $query = $this->connection -> query($sql);
         if ($query->num_rows > 0) {
             $row = $query->fetch_array();
